@@ -1,7 +1,7 @@
 #!/bin/bash
-total=`df -h . | awk -F " " '{print $(NF-1)}' | sed 's/%//Ig' `
-oldfile= `expr $total - 20`
-if [  $oldfile  -gt  0  ]
-then 
-ls -lrt | xargs rm -rf 
-fi 
+total=`ls  /var/lib/jenkins/workspace/job5 | wc -l` 
+oldfiles=`expr $total - 20`
+if [ $oldfiles -gt 0 ]
+then
+ls -rt | head -$oldfiles | xargs rm -rf
+fi
