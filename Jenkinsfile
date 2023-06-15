@@ -1,10 +1,10 @@
 pipeline {
     
-    stages {
+    stages any 
         stage('checkout') {
             steps {
                 sh 'echo checkout step'
             }
         }
     }
-}
+
