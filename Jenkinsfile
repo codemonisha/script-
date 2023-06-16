@@ -1,3 +1,5 @@
+@library('slb')_
+
 pipeline {
     agent any 
     stages {
