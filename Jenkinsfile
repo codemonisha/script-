@@ -1,4 +1,4 @@
-@library('slb')_
+@Library('javahome-demo')_
 
 pipeline {
     agent any 
